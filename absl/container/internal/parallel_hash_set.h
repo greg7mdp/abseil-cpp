@@ -192,7 +192,7 @@ protected:
   };
 
   // --------------------------------------------------------------------
-  struct Inner : public Mutex
+  struct alignas(64) Inner : public Mutex
   {
     bool operator==(const Inner& o) const
     {
